@@ -51,6 +51,7 @@ body {
 /* .inline {
     vertical-align: middle;
 } */
+
 label {
     display: block;
     margin: 0.5rem
@@ -73,4 +74,12 @@ label {
     width: 7rem;
     height: 7rem;
     padding: 7.5rem 9rem;
+}
+
+button {
+    background-color: #0fb9b1;
+    padding: 0.5rem 3rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    font-family: 'Roboto', sans-serif;
 }
