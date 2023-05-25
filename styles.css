@@ -83,3 +83,7 @@ button {
     margin-top: 0.5rem;
     font-family: 'Roboto', sans-serif;
 }
+
+div > h4 {
+    margin-left: 2rem
+}
