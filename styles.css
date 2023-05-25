@@ -14,3 +14,19 @@ body {
     /* background-attachment: fixed; */
     /* background-position: fixed; */
 }
+
+.header {
+    background-color: #0fb9b1;
+    padding: 5px;
+    margin-top: -10px;
+    margin-right: -10px;
+    margin-left: -10px;
+    height: 30;    
+}
+
+#header-text {
+    margin-top: 6px;
+    padding-left: 15px;
+    font-family: 'Roboto', sans-serif;
+    
+}
