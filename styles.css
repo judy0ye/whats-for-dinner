@@ -27,6 +27,50 @@ body {
 #header-text {
     margin-top: 6px;
     padding-left: 15px;
+    font-family: 'Roboto', sans-serif;  
+}
+
+.flex-container {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-around;
+}
+
+.options {
+    /* display: inline-block; */
+    border: 5px solid black;
+    width: 400px;
+    height: 350px;
     font-family: 'Roboto', sans-serif;
-    
+    font-size: 1.5rem;
+    opacity: .95;
+    background-color: rgba(225, 225, 225, .9);
+
+}
+
+/* .inline {
+    vertical-align: middle;
+} */
+label {
+    display: block;
+    margin: 0.5rem
+}
+/* .options-questions {
+    padding-left: 1rem;
+    font-family: 'Roboto', sans-serif
+} */
+
+.recipe {
+    border: 5px solid black;
+    width: 400px;
+    height: 350px;
+    opacity: .95;
+    background-color: rgba(225, 225, 225, .9);
+}
+
+.svg {
+    /* border: solid red; */
+    width: 7rem;
+    height: 7rem;
+    padding: 7.5rem 9rem;
 }
