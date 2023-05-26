@@ -74,6 +74,7 @@ function getRandomIndex(array) {
 }
 
 function randomDish() {
+    hiddenRandomBox.innerHTML = ''
     svgImage.classList.add('hidden')
     hiddenRandomBox.classList.remove('hidden')
 
