@@ -57,14 +57,16 @@ var dessertRadio = document.querySelector('#dessert')
 // var recipeBox = document.querySelector('.recipe')
 var hiddenRandomBox = document.querySelector('.random')
 var svgImage = document.querySelector('.svg')
+var required = document.querySelector('.required')
 
 
 // button listeners
 var cookButton = document.querySelector('.cook')
 
 // event listeners
-cookButton.addEventListener('click', showRandomDish)
-// receipeBox.addEventListener(, randomDish)
+cookButton.addEventListener('click', function() {
+    showRandomDish()
+})
 
 // functions
 function getRandomIndex(array) {
@@ -90,6 +92,10 @@ function randomDish() {
 }
 
 function showRandomDish() {
+    if (!sideRadio.checked && !mainDishRadio.checked && !dessertRadio.checked) {
+        required.classList.remove('hidden')
+        e.preventDefault()   
+    }
     randomDish()
     hiddenRandomBox.innerHTML +=
     `<div>
