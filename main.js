@@ -1,24 +1,63 @@
 // data
 var sides = [
-'Miso Glazed Carrots',
-'Coleslaw',
-'Garden Salad',
-'Crispy Potatoes',
-'Sweet Potato Tots',
-'Coconut Rice',
-'Caeser Salad',
-'Shrimp Summer Rolls',
-'Garlic Butter Mushrooms',
-'Hush Puppies'
+    'Miso Glazed Carrots',
+    'Coleslaw',
+    'Garden Salad',
+    'Crispy Potatoes',
+    'Sweet Potato Tots',
+    'Coconut Rice',
+    'Caeser Salad',
+    'Shrimp Summer Rolls',
+    'Garlic Butter Mushrooms',
+    'Hush Puppies'
 ]
 
+var mainDishes = [
+    'Spaghetti and Meatballs',
+    'Pineapple Chicken',
+    'Shakshuka',
+    'Thai Yellow Curry',
+    'Bibimbap',
+    'Chicken Parmesean',
+    'Butternut Squash Soup',
+    'BBQ Chicken Burgers',
+    'Ramen',
+    'Empanadas',
+    'Chicken Fried Rice',
+    'Sheet Pan Fajitas',
+    'Margarita Pizza'
+]
+
+var desserts = [
+    'Apple Pie',
+    'Lemon Meringue Pie',
+    'Black Forest Cake',
+    'Banana Bread',
+    'Peach Cobbler',
+    'Cheesecake',
+    'Funfetti Cake',
+    'Baklava',
+    'Flan',
+    'Macarons',
+    'Macaroons',
+    'Chocolate Cupcakes',
+    'Pavlova',
+    'Pumpkin Pie',
+    'Key Lime Pie',
+    'Tart Tatin',
+    'Croissants',
+    'Eclairs'
+]
 var currentRecipe
 
 // query selectors
 var sideRadio = document.querySelector('#side')
+var mainDishRadio = document.querySelector('#main-dish')
+var dessertRadio = document.querySelector('#dessert')
 // var recipeBox = document.querySelector('.recipe')
 var hiddenRandomBox = document.querySelector('.random')
 var svgImage = document.querySelector('.svg')
+
 
 // button listeners
 var cookButton = document.querySelector('.cook')
@@ -35,8 +74,18 @@ function getRandomIndex(array) {
 function randomDish() {
     svgImage.classList.add('hidden')
     hiddenRandomBox.classList.remove('hidden')
+
     var randomSides = sides[getRandomIndex(sides)]
-    currentRecipe = randomSides
+    var randomMainDishes = mainDishes[getRandomIndex(mainDishes)]
+    var randomDesserts = desserts[getRandomIndex(desserts)]
+
+    if (document.getElementById('side').checked) {
+        currentRecipe = randomSides
+    } else if (document.getElementById('main-dish').checked) {
+        currentRecipe = randomMainDishes
+    } else if (document.getElementById('dessert').checked) {
+        currentRecipe = randomDesserts
+    }
     return currentRecipe
 }
 
