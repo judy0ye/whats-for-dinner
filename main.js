@@ -49,6 +49,7 @@ var desserts = [
     'Eclairs'
 ]
 var currentRecipe
+var favoriteRecipes = []
 
 // query selectors
 var sideRadio = document.querySelector('#side')
@@ -58,14 +59,19 @@ var hiddenRandomBox = document.querySelector('.random')
 var svgImage = document.querySelector('.svg')
 var required = document.querySelector('.required')
 
-
-// button listeners
+// buttons
 var cookButton = document.querySelector('.cook')
+var addToFavoritesButton = document.getElementById('favorite')
+var addToFavoritesButton = document.querySelector('.add-to-favorites')
+var hiddenFavoritesButtons = document.querySelector('.favorites-flex-container')
 
 // event listeners
 cookButton.addEventListener('click', function() {
     showRandomDish()
+    hiddenFavoritesButtons.classList.remove('hidden')
 })
+
+addToFavoritesButton.addEventListener('click', addToFavoriteRecipes)
 
 // functions
 function getRandomIndex(array) {
@@ -101,7 +107,12 @@ function showRandomDish() {
     `<div>
         <h4 id="you-should-make"><i>You should make:</i></h4>
         <div id="current-recipe"><h1>${currentRecipe}</h1></div>
-    </div>
-    <button class="favorite">Add to Favorites</button>`
-     
+    </div>` 
+        
+    //anotherOneButton.classList.remove('hidden')
+}
+
+
+function addToFavoriteRecipes() {
+    favoriteRecipes.push(currentRecipe)
 }
