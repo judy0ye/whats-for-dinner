@@ -101,5 +101,7 @@ function showRandomDish() {
     `<div>
         <h4 id="you-should-make"><i>You should make:</i></h4>
         <div id="current-recipe"><h1>${currentRecipe}</h1></div>
-    </div>` 
+    </div>
+    <button class="favorite">Add to Favorites</button>`
+     
 }
