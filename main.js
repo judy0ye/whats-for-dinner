@@ -119,7 +119,9 @@ function showRandomDish() {
 {/* <section id="current-recipe"></section> */}
 
 function addToFavoriteRecipes() {
-    favoriteRecipes.push(currentRecipe)
+    if (!favoriteRecipes.includes(currentRecipe)) {
+        favoriteRecipes.push(currentRecipe) 
+    }
 }
 
 function showFavoritesPage() {
