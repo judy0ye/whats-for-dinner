@@ -58,12 +58,15 @@ var dessertRadio = document.querySelector('#dessert')
 var hiddenRandomBox = document.querySelector('.random')
 var svgImage = document.querySelector('.svg')
 var required = document.querySelector('.required')
+var favoritesPage = document.querySelector('.favorites-page')
+var mainPage = document.querySelector('.flex-container')
 
 // buttons
 var cookButton = document.querySelector('.cook')
 var addToFavoritesButton = document.getElementById('favorite')
 var addToFavoritesButton = document.querySelector('.add-to-favorites')
-var hiddenFavoritesButtons = document.querySelector('.favorites-flex-container')
+var hiddenFavoritesButtons = document.querySelector('.favoritesButtons-flex-container')
+var viewFavoritesButton = document.querySelector('.view-favorites')
 
 // event listeners
 cookButton.addEventListener('click', function() {
@@ -72,6 +75,7 @@ cookButton.addEventListener('click', function() {
 })
 
 addToFavoritesButton.addEventListener('click', addToFavoriteRecipes)
+viewFavoritesButton.addEventListener('click', showFavoritesPage)
 
 // functions
 function getRandomIndex(array) {
@@ -104,15 +108,20 @@ function showRandomDish() {
     }
     randomDish()
     hiddenRandomBox.innerHTML +=
-    `<div>
+    `<section>
         <h4 id="you-should-make"><i>You should make:</i></h4>
-        <div id="current-recipe"><h1>${currentRecipe}</h1></div>
-    </div>` 
+        <p style="font-size:25px">${currentRecipe}</p>
+    </section>` 
         
     //anotherOneButton.classList.remove('hidden')
 }
-
+{/* <section id="current-recipe"></section> */}
 
 function addToFavoriteRecipes() {
     favoriteRecipes.push(currentRecipe)
+}
+
+function showFavoritesPage() {
+    favoritesPage.classList.remove('hidden')
+    mainPage.classList.add('hidden')
 }

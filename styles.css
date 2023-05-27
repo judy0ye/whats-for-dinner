@@ -39,13 +39,15 @@ body {
     justify-content: space-around;
 }
 
-.favorites-flex-container {
+.favoritesButtons-flex-container {
     display: flex;
     justify-content: space-between;
+   
+    
 }
 
 .options {
-    border: 5px solid black;
+    /* border: 5px solid black; */
     width: 400px;
     height: 350px;
     font-family: 'Roboto', sans-serif;
@@ -61,18 +63,40 @@ label {
     margin: 0.5rem
 }
 
-
 .recipe, .random {
+    /* border: 5px solid black; */
+    width: 400px;
+    height: 350px;
+    opacity: .95;
+    background-color: rgba(225, 225, 225, .9);
+}
+
+.favorites-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-to-main, .add-to-favorites, .view-favorites {
+   
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #0fb9b1
+}
+.favorites-box {
     border: 5px solid black;
     width: 400px;
     height: 350px;
     opacity: .95;
     background-color: rgba(225, 225, 225, .9);
 }
+
 .random {
     text-align: center;
     display: flex;
-    border: 5px solid green;
+    /* border: 5px solid green; */
     justify-content: center;
     align-items: center;
     font-family: 'Roboto', sans-serif;
