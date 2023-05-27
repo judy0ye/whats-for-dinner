@@ -60,6 +60,7 @@ var svgImage = document.querySelector('.svg')
 var required = document.querySelector('.required')
 var favoritesPage = document.querySelector('.favorites-page')
 var mainPage = document.querySelector('.flex-container')
+var favoritesBox = document.querySelector('.favorites-box')
 
 // buttons
 var cookButton = document.querySelector('.cook')
@@ -124,4 +125,15 @@ function addToFavoriteRecipes() {
 function showFavoritesPage() {
     favoritesPage.classList.remove('hidden')
     mainPage.classList.add('hidden')
+
+    for (var i = 0; i < favoriteRecipes.length; i++) {
+        favoritesBox.innerHTML +=
+        `<div class="favorite-recipe-list">
+        <ul>
+            <li>${favoriteRecipes[i]}</li>
+        </ul>
+        </div>`
+    }
+    
+
 }

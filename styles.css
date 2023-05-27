@@ -12,7 +12,7 @@ body {
     background-image: url(/Users/judyye/turing_work/mod1/whats-for-dinner/assets/burger-friends.jpg);
     background-size: cover;
     /* background-attachment: fixed; */
-    /* background-position: fixed; */
+    background-position: fixed;
 }
 
 .header {
@@ -74,7 +74,7 @@ label {
 .favorites-page {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -88,9 +88,10 @@ label {
 .favorites-box {
     border: 5px solid black;
     width: 400px;
-    height: 350px;
+    height: 450px;
     opacity: .95;
     background-color: rgba(225, 225, 225, .9);
+    overflow: auto;
 }
 
 .random {
@@ -134,5 +135,9 @@ label {
 
 .hidden {
     display: none;
+}
+
+.favorite-recipe-list {
+    display: list-item;
 }
 
