@@ -40,7 +40,6 @@ body {
 }
 
 .options {
-    /* display: inline-block; */
     border: 5px solid black;
     width: 400px;
     height: 350px;
@@ -51,9 +50,6 @@ body {
 
 }
 
-/* .inline {
-    vertical-align: middle;
-} */
 
 label {
     display: block;
@@ -77,23 +73,8 @@ label {
     font-family: 'Roboto', sans-serif;
 
 }
-/* .hidden-box {
-    display: flex;
-    flex-direction: column;
-
-} */
-/* #you-should-make {
-    display: flex;
-    justify-content: center
-}
-
-#current-recipe {
-    display: flex;
-    justify-content: center
-} */
 
 .svg {
-    /* border: solid red; */
     width: 7rem;
     height: 7rem;
     padding: 7.5rem 9rem;

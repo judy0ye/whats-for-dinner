@@ -54,7 +54,6 @@ var currentRecipe
 var sideRadio = document.querySelector('#side')
 var mainDishRadio = document.querySelector('#main-dish')
 var dessertRadio = document.querySelector('#dessert')
-// var recipeBox = document.querySelector('.recipe')
 var hiddenRandomBox = document.querySelector('.random')
 var svgImage = document.querySelector('.svg')
 var required = document.querySelector('.required')
