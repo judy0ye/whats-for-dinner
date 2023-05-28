@@ -142,6 +142,7 @@ function showFavoritesPage() {
   }
 
   var deleteButtons = document.querySelectorAll(".delete");
+  
   for (var i = 0; i < deleteButtons.length; i++) {
     deleteButtons[i].addEventListener("click", function (e) {
       deleteRecipe(e);
@@ -155,7 +156,12 @@ function backToMain() {
 }
 
 function deleteRecipe(e) {
-  if (e.target.classList.contains("delete")) {
-    list.removeChild(e.target.parentElement.parentElement);
+  for (var i = 0; i < favoriteRecipes.length; i++) {
+    if (e.target.classList.contains("delete")) {
+      list.removeChild(e.target.parentElement.parentElement)
+      && favoriteRecipes.splice(i,1);
+    } 
   }
+  
 }
+//list.removeChild(e.target.parentElement.parentElement)
