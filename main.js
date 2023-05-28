@@ -50,6 +50,7 @@ var desserts = [
 ];
 var currentRecipe;
 var favoriteRecipes = [];
+var list;
 
 // query selectors
 var sideRadio = document.querySelector("#side");
@@ -61,7 +62,7 @@ var required = document.querySelector(".required");
 var favoritesPage = document.querySelector(".favorites-page");
 var mainPage = document.querySelector(".flex-container");
 var favoritesBox = document.querySelector(".favorites-box");
-var list;
+
 
 // buttons
 var cookButton = document.querySelector(".cook");
@@ -95,11 +96,11 @@ function randomDish() {
   var randomMainDishes = mainDishes[getRandomIndex(mainDishes)];
   var randomDesserts = desserts[getRandomIndex(desserts)];
 
-  if (document.getElementById("side").checked) {
+  if (sideRadio.checked) {
     currentRecipe = randomSides;
-  } else if (document.getElementById("main-dish").checked) {
+  } else if (mainDishRadio.checked) {
     currentRecipe = randomMainDishes;
-  } else if (document.getElementById("dessert").checked) {
+  } else if (dessertRadio.checked) {
     currentRecipe = randomDesserts;
   }
   return currentRecipe;
@@ -164,4 +165,3 @@ function deleteRecipe(e) {
   }
   
 }
-//list.removeChild(e.target.parentElement.parentElement)
