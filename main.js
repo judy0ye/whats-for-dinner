@@ -149,15 +149,12 @@ function showFavoritesPage() {
   }
 }
 
-
-
 function backToMain() {
   favoritesPage.classList.add("hidden");
   mainPage.classList.remove("hidden");
 }
 
 function deleteRecipe(e) {
-  console.log("deleteRecipe");
   if (e.target.classList.contains("delete")) {
     list.removeChild(e.target.parentElement.parentElement);
   }
