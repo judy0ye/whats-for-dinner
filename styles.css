@@ -33,17 +33,20 @@ body {
 .required {
     color: #ee5253
 }
+
 .flex-container {
     display: flex;
     margin-top: 2rem;
     justify-content: space-around;
 }
 
+fieldset {
+    border: 0;
+}
+
 .favoritesButtons-flex-container {
     display: flex;
-    justify-content: space-between;
-   
-    
+    justify-content: space-between;    
 }
 
 .options {
@@ -78,13 +81,21 @@ label {
     align-items: center;
 }
 
-.back-to-main, .add-to-favorites, .view-favorites {
-   
+.add-to-favorites, .view-favorites {
     font-family: 'Roboto', sans-serif;
     border-radius: 5px;
     padding: 5px 10px;
     background-color: #0fb9b1
 }
+
+.back-to-main {
+    margin: 2rem;  
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    padding: 8px 15px;
+    background-color: #0fb9b1
+}
+
 .favorites-box {
     border: 5px solid black;
     width: 400px;
@@ -139,15 +150,24 @@ label {
 
 .favorite-recipe-list {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
-ul > li > span {
+li {
+    margin: 2rem 1.5rem;
+    justify-content: space-between;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
 }
 
 ul {
     list-style-type: none;
     padding: 0
+}
+
+.delete {
+    background-color: #95a5a6;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
 }

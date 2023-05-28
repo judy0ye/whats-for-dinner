@@ -135,9 +135,9 @@ function showFavoritesPage() {
   for (var i = 0; i < favoriteRecipes.length; i++) {
     list.innerHTML += `<li>
                 ${favoriteRecipes[i]}
-                <span>
+                <div>
                     <button class="delete">Delete</button>
-                </span>
+                </div>
             </li>`;
   }
 
