@@ -7,10 +7,10 @@ This application allows users to choose recipes listed under "Side," "Main Dish,
 ### Installation Instructions:
 [//]: <> (What steps does a person have to take to get your app cloned down and running?)
 In order to use this project, please follow the steps below:
-Fork this repository
-Clone down the forked repository
-After CD-ing into the repository, open the project in your chosen text editor
-View the project in your browswer by using "open index.html" in your terminal
+- Fork this repository
+- Clone down the forked repository
+- After CD-ing into the repository, open the project in your chosen text editor
+- View the project in your browswer by using "open index.html" in your terminal
 
 ### Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
