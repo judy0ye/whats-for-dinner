@@ -138,6 +138,16 @@ label {
 }
 
 .favorite-recipe-list {
-    display: list-item;
+    display: flex;
+    justify-content: center;
 }
 
+ul > li > span {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0
+}
