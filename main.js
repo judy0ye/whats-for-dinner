@@ -74,10 +74,7 @@ var viewFavoritesButton = document.querySelector(".view-favorites");
 var backToMainButton = document.querySelector(".back-to-main");
 
 // event listeners
-cookButton.addEventListener("click", function () {
-  showRandomDish();
-  hiddenFavoritesButtons.classList.remove("hidden");
-});
+cookButton.addEventListener("click", showRandomDish);
 addToFavoritesButton.addEventListener("click", addToFavoriteRecipes);
 viewFavoritesButton.addEventListener("click", showFavoritesPage);
 backToMainButton.addEventListener("click", backToMain);
@@ -109,9 +106,13 @@ function randomDish() {
 function showRandomDish() {
   if (!sideRadio.checked && !mainDishRadio.checked && !dessertRadio.checked) {
     required.classList.remove("hidden");
-    e.preventDefault();
+    return
   }
+  
+  hiddenFavoritesButtons.classList.remove("hidden")
+  
   randomDish();
+  
   hiddenRandomBox.innerHTML += `<section>
         <h4 id="you-should-make"><i>You should make:</i></h4>
         <p style="font-size:25px">${currentRecipe}</p>
@@ -124,36 +125,37 @@ function addToFavoriteRecipes() {
   }
 }
 
+function toggleClass(element, className) {
+  element.classList.toggle(className)
+}
+
 function showFavoritesPage() {
-  favoritesBox.innerHTML = `<div class="favorite-recipe-list">
-        <ul id="list"></ul>
-        </div>`;
+  favoritesBox.innerHTML = 
+  `<div class="favorite-recipe-list">
+    <ul id="list"></ul>
+  </div>`;
+  
   list = document.getElementById("list");      
   
-  favoritesPage.classList.remove("hidden");
-  mainPage.classList.add("hidden");
+  toggleClass(favoritesPage, 'hidden');
+  toggleClass(mainPage, 'hidden');
 
   for (var i = 0; i < favoriteRecipes.length; i++) {
-    list.innerHTML += `<li>
-                ${favoriteRecipes[i]}
-                <div>
-                    <button class="delete">Delete</button>
-                </div>
-            </li>`;
+    list.innerHTML += 
+    `<li>${favoriteRecipes[i]}
+      <div>
+        <button class="delete">Delete</button>
+      </div>
+    </li>`
   }
 
   var deleteButtons = document.querySelectorAll(".delete");
   
   for (var i = 0; i < deleteButtons.length; i++) {
-    deleteButtons[i].addEventListener("click", function (e) {
+    deleteButtons[i].addEventListener("click", function(e) {
       deleteRecipe(e);
     });
   }
-}
-
-function backToMain() {
-  favoritesPage.classList.add("hidden");
-  mainPage.classList.remove("hidden");
 }
 
 function deleteRecipe(e) {
@@ -162,6 +164,10 @@ function deleteRecipe(e) {
       list.removeChild(e.target.parentElement.parentElement)
       && favoriteRecipes.splice(i,1);
     } 
-  }
-  
+  }  
+}
+
+function backToMain() {
+  toggleClass(favoritesPage, 'hidden');
+  toggleClass(mainPage, 'hidden');;
 }

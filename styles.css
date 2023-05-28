@@ -11,7 +11,6 @@ red - #ee5253
 body {
     background-image: url(/Users/judyye/turing_work/mod1/whats-for-dinner/assets/burger-friends.jpg);
     background-size: cover;
-    /* background-attachment: fixed; */
     background-position: fixed;
 }
 
@@ -50,16 +49,13 @@ fieldset {
 }
 
 .options {
-    /* border: 5px solid black; */
     width: 400px;
     height: 350px;
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
     opacity: .95;
     background-color: rgba(225, 225, 225, .9);
-
 }
-
 
 label {
     display: block;
@@ -67,7 +63,6 @@ label {
 }
 
 .recipe, .random {
-    /* border: 5px solid black; */
     width: 400px;
     height: 350px;
     opacity: .95;
@@ -97,9 +92,8 @@ label {
 }
 
 .favorites-box {
-    border: 5px solid black;
     width: 400px;
-    height: 450px;
+    height: 500px;
     opacity: .95;
     background-color: rgba(225, 225, 225, .9);
     overflow: auto;
@@ -108,23 +102,11 @@ label {
 .random {
     text-align: center;
     display: flex;
-    /* border: 5px solid green; */
     justify-content: center;
     align-items: center;
     font-family: 'Roboto', sans-serif;
 
 }
-
-/* .favorite {
-    border-radius: 5px;
-    margin-right: -8rem;
-    margin-top: 17rem;
-    background-color: #95a5a6;
-    background-color: #95a5a6;
-    padding: 0.4rem;
-    color: white;
-    position: absolute
-} */
 
 .svg {
     width: 7rem;
@@ -170,4 +152,8 @@ ul {
     background-color: #95a5a6;
     font-family: 'Roboto', sans-serif;
     border-radius: 5px;
+}
+
+.favorites-page {
+    margin-top: 2.5rem
 }
